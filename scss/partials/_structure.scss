@@ -43,7 +43,8 @@
             }
         }
 
-        a:before, a:after {
+        a:before,
+        a:after {
             content: '';
             position: absolute;
             width: 0%;
@@ -52,7 +53,7 @@
             margin-top: -0.5px;
             background: $color-link;
         }
-        
+
         a:before {
             left: -2.5px;
         }
@@ -61,13 +62,13 @@
             right: 2.5px;
             transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
-        
+
         a:hover:before {
             background: $color-link;
             width: 100%;
             transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
         }
-        
+
         a:hover:after {
             background: transparent;
             width: 100%;
@@ -79,7 +80,7 @@
 /* HERO SECTION */
 
 .hero {
-    background-image: url("/img/Wedding-Cupcakes.jpg");
+    background-image: url("../img/Wedding-Cupcakes.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -111,7 +112,7 @@
         padding: 2em;
         display: flex;
         justify-content: space-between;
-        max-width: 1500px; 
+        max-width: 1500px;
 
         li {
             list-style: none;
@@ -135,7 +136,8 @@
         }
     }
 
-    a:before, a:after {
+    a:before,
+    a:after {
         content: '';
         position: absolute;
         width: 0%;
@@ -144,7 +146,7 @@
         margin-top: -0.5px;
         background: $color-link;
     }
-    
+
     a:before {
         left: -2.5px;
     }
@@ -153,26 +155,26 @@
         right: 2.5px;
         transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
-    
+
     a:hover:before {
         background: $color-link;
         width: 100%;
         transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
     }
-    
+
     a:hover:after {
         background: transparent;
         width: 100%;
         transition: 0s;
     }
-    
+
     .copyright {
         display: flex;
         justify-content: center;
         text-align: center;
         font-size: 75%;
         padding: 3em;
-        
+
         a {
             color: $color-link;
             font-weight: 700;
@@ -184,6 +186,7 @@
     .icon-button {
         display: flex;
         flex-direction: column;
+
         button {
             padding: .3em;
         }
@@ -193,10 +196,10 @@
 /* SEASONAL SWEETS PAGE */
 
 .season-hero {
-    background-image: linear-gradient(217deg, $color-body-background, rgba(255,0,0,0) 70%),
-    linear-gradient(19deg, $color-body-background, rgba(0,0,255,0) 70%),
-    linear-gradient(150deg, rgb(59, 144, 255), rgba(0,0,255,0) 60%),
-    linear-gradient(180deg, $color-shadow, rgba(0,0,0,0) 70%);
+    background-image: linear-gradient(217deg, $color-body-background, rgba(255, 0, 0, 0) 70%),
+        linear-gradient(19deg, $color-body-background, rgba(0, 0, 255, 0) 70%),
+        linear-gradient(150deg, rgb(59, 144, 255), rgba(0, 0, 255, 0) 60%),
+        linear-gradient(180deg, $color-shadow, rgba(0, 0, 0, 0) 70%);
     min-height: 100vh;
 
     .greetings {
@@ -212,7 +215,8 @@
             line-height: .5em;
         }
 
-        p, a {
+        p,
+        a {
             display: block;
             text-align: center;
             margin: 0 1em;
@@ -223,6 +227,7 @@
             color: $color-body;
             font-weight: 800;
             text-transform: uppercase;
+
             &:hover {
                 color: $color-header;
             }
