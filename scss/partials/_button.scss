@@ -1,0 +1,201 @@
+/* BUTTONS */
+
+.button {
+    position: relative;
+    font-family: $font-body-sans;
+    background-color: $color-link;
+    font-weight: 700;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 15px;
+    text-transform: uppercase;
+    
+    a {
+        transition: all 0.3s ease-in;
+        transform: scale (1, 1);
+    }
+
+    &:hover {
+        color: white;
+    }
+}
+
+    .button::before, .button::after {
+    content: '';
+    position: absolute;
+    transition: all 0.3s;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    z-index: 1;
+    }
+
+.button::before {
+	z-index: 1;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(0.1, 1);
+}
+
+.button:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+}
+
+.button::after {
+    transition: all 0.3s;
+    border: 1px solid rgb(255, 255, 255, .1);
+}
+
+.button:hover::after {
+    transform: scale(1, .1);
+    opacity: 0;
+}
+
+/* SOCIAL MEDIA ICONS */
+
+@mixin transition($property: all, $duration: 0.45s, $ease: cubic-bezier(0.65,0,.076,1)) {
+    transition: $property $duration $ease;
+}
+
+button {
+    font-family: $font-body-sans;
+    font-size: 100%;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    .icon {
+        font-size: 2em;
+    }
+    &.facebook {
+        .circle {
+        background-color: rgb(59, 89, 152);
+        }
+    }
+    &.instagram {
+        .circle {
+            background: linear-gradient(217deg, rgba(138,58,185,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(233,89,80,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(1deg, rgba(252,204,99,1), rgba(0,255,0,0) 70.71%),
+            linear-gradient(5deg, rgba(205,72,107,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(99deg, rgba(188,42,141,.8), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, rgba(251,173,80,.8), rgba(0,0,255,0) 70.71%);
+        }
+    }
+    &.twitter {
+        .circle {
+        background-color: rgb(29, 161, 242);
+        }
+    }
+    &.pinterest {
+        .circle {
+        background-color: rgb(230, 0, 35);
+        }
+    }
+    &.facebook,
+    &.instagram,
+    &.twitter,
+    &.pinterest {
+        width: 12rem;
+        height: auto;
+        .circle {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: relative;
+        display: block;
+        margin: 0;
+        width: 3em;
+        height: 3em;
+        border-radius: 1.625rem;
+        .icon {
+            @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+            fill: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &.logo {
+                @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+                height: 1em;
+                left: 0.275em;
+                width: 1em;
+                background: none;
+                &::before {
+                position: absolute;
+                    }
+                }
+            }
+        }
+    .label {
+        @include transition(all, 0.45s, cubic-bezier(0.65,0,.076,1));
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 1.2em 0;
+        margin: 0 0 0 1.85rem;
+        color: $color-body-background;
+        font-weight: 700;
+        line-height: 1.6;
+        text-align: center;
+        text-transform: uppercase;
+        }
+    }
+    &:hover {
+        .circle {
+            width: 100%;
+            .icon {
+                &.arrow {
+                background: white;
+                transform: translate(1rem, 0);
+                }
+            }
+        }
+        .label {
+        color: white;
+        }
+    }
+}
+
+/* CAROUSEL BUTTON */
+
+.carousel-item .active .button {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.6s all ease-in-out;
+    visibility: visible;
+}
+
+/* FLIP CARD BUTTON */
+
+.flip-button {
+    font-family: $font-body-sans;
+    background-color: $color-link;
+    font-weight: 700;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 1em;
+    border-radius: 15px;
+    text-transform: uppercase;
+    box-shadow: 5px 5px 5px $color-shadow;
+    
+    a {
+        transition: all 0.3s ease-in;
+        transform: scale (1, 1);
+    }
+
+    &:hover {
+        color: white;
+    }
+}

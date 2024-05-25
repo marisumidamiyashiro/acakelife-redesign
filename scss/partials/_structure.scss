@@ -1,0 +1,254 @@
+/* SITE STRUCTURE */
+
+.site-header {
+    position: absolute;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+
+    .site-id {
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+}
+
+/* SITE NAV */
+
+.site-header .site-nav {
+
+    ul {
+        display: flex;
+        list-style: none;
+        align-items: flex-start;
+        justify-content: space-between;
+        text-transform: uppercase;
+
+        a {
+            position: relative;
+            font-weight: 800;
+            display: block;
+            margin: .5em;
+            padding: 1em;
+            color: $color-body;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        a:before, a:after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            top: 75%;
+            margin-top: -0.5px;
+            background: $color-link;
+        }
+        
+        a:before {
+            left: -2.5px;
+        }
+
+        a:after {
+            right: 2.5px;
+            transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        a:hover:before {
+            background: $color-link;
+            width: 100%;
+            transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+        
+        a:hover:after {
+            background: transparent;
+            width: 100%;
+            transition: 0s;
+        }
+    }
+}
+
+/* HERO SECTION */
+
+.hero {
+    background-image: url("/img/Wedding-Cupcakes.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: left;
+    min-height: 90vh;
+    display: flex;
+
+    .container {
+        margin: 10em 0 0 15em;
+
+        p {
+            padding: 0 0 1.5em 0;
+            max-width: 500px;
+        }
+    }
+
+    .color {
+        color: $color-header;
+    }
+}
+
+/* FOOTER SECTION */
+
+.site-footer {
+    background-color: $color-body-background;
+    padding: 6em;
+
+    .container {
+        padding: 2em;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1500px; 
+
+        li {
+            list-style: none;
+            align-items: left;
+        }
+    }
+
+    a {
+        position: relative;
+        margin: .5em;
+        padding: .5em .5em .5em 0;
+        line-height: 2em;
+        text-decoration: none;
+        color: $color-body;
+        font-weight: 300;
+        text-transform: uppercase;
+
+        &:hover {
+            color: black;
+            font-style: italic;
+        }
+    }
+
+    a:before, a:after {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 1px;
+        top: 50%;
+        margin-top: -0.5px;
+        background: $color-link;
+    }
+    
+    a:before {
+        left: -2.5px;
+    }
+
+    a:after {
+        right: 2.5px;
+        transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    
+    a:hover:before {
+        background: $color-link;
+        width: 100%;
+        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+    
+    a:hover:after {
+        background: transparent;
+        width: 100%;
+        transition: 0s;
+    }
+    
+    .copyright {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 75%;
+        padding: 3em;
+        
+        a {
+            color: $color-link;
+            font-weight: 700;
+        }
+    }
+}
+
+.row {
+    .icon-button {
+        display: flex;
+        flex-direction: column;
+        button {
+            padding: .3em;
+        }
+    }
+}
+
+/* SEASONAL SWEETS PAGE */
+
+.season-hero {
+    background-image: linear-gradient(217deg, $color-body-background, rgba(255,0,0,0) 70%),
+    linear-gradient(19deg, $color-body-background, rgba(0,0,255,0) 70%),
+    linear-gradient(150deg, rgb(59, 144, 255), rgba(0,0,255,0) 60%),
+    linear-gradient(180deg, $color-shadow, rgba(0,0,0,0) 70%);
+    min-height: 100vh;
+
+    .greetings {
+        margin: 0em;
+        padding: 12em 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-size: 6em;
+            line-height: .5em;
+        }
+
+        p, a {
+            display: block;
+            text-align: center;
+            margin: 0 1em;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-body;
+            font-weight: 800;
+            text-transform: uppercase;
+            &:hover {
+                color: $color-header;
+            }
+        }
+    }
+}
+
+hr {
+    margin-top: 2em;
+    background: $color-shadow;
+    height: 5px;
+    border: none;
+    width: 600px;
+}
+
+.seasonal-cookie-kits {
+    max-width: 2000px;
+    display: flex;
+    justify-content: center;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.section-header {
+    margin: 1em 0 0 5em;
+    font-size: 2em;
+}

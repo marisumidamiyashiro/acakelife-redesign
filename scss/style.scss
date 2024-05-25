@@ -1,0 +1,32 @@
+/* GLOBAL RESETS */
+
+* {box-sizing: border-box;}
+
+// VARIABLES
+
+$color-body-background: rgb(255, 236, 222);
+$color-header: rgba(86, 36, 57, 1);
+$color-body: rgba(0, 0, 0, .8);
+$color-link: rgb(230, 167, 96);
+$color-shadow: rgba(163, 119, 138, 1);
+
+$font-header: tangerine, sans-serif;
+$font-body-sans: interstate, sans-serif;
+$font-body-serif: gimlet-display-compressed, serif;
+
+body {
+    background-color: $color-body-background;
+}
+
+// IMPORTS
+
+@import "partials/toc";
+@import "partials/typography";
+@import "partials/media";
+@import "partials/layout";
+@import "partials/structure";
+@import "partials/helpers";
+@import "partials/button";
+@import "partials/animation";
+@import "partials/carousel";
+@import "partials/productcards";

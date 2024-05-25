@@ -1,0 +1,762 @@
+/* GLOBAL RESETS */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(255, 236, 222);
+}
+
+/*
+
+TABLE OF CONTENTS
+
+# GLOBAL RESETS
+# TYPOGRAPHY
+# BUTTONS 
+# MEDIA
+    # RESPONSIVE IMAGES
+# LAYOUT
+    # CONTAINER
+    # MEDIA QUERIES
+    # SEMANTIC GRID SYSTEM
+# STRUCTURE
+    # SITE HEADER
+    # SITE NAV
+    # MAIN
+        # SECTIONS
+    # SITE FOOTER
+        #FORM
+
+
+*/
+/* BASE TEXT COLORS */
+body {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+h1, h2, h3 {
+  color: rgb(86, 36, 57);
+}
+
+/* BASE TEXT FONTS */
+body {
+  font-family: interstate, sans-serif;
+}
+
+h1 {
+  font-family: tangerine, sans-serif;
+}
+
+h2, h3 {
+  font-family: gimlet-display-compressed, serif;
+}
+
+/* BASE TYPOGRAPHY */
+body {
+  font-size: 100%;
+  line-height: 1.4;
+}
+
+h1, h2, h3, p {
+  margin: 0 0 0.5em 0;
+}
+
+/* TRADITIONAL TYPOGRAPHIC SCALE */
+h1 {
+  font-size: 3em;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 1.75em;
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1.2;
+}
+
+/* LIMIT NUMBER OF CHARACTERS PER LINE */
+p {
+  max-width: 50em;
+}
+
+/* RESPONSIVE IMAGES */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* RESET BODY */
+body {
+  margin: 0;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
+/* SITE STRUCTURE */
+.site-header {
+  position: absolute;
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+}
+.site-header .site-id {
+  display: flex;
+  align-items: center;
+}
+.site-header a {
+  text-decoration: none;
+}
+
+/* SITE NAV */
+.site-header .site-nav ul {
+  display: flex;
+  list-style: none;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+.site-header .site-nav ul a {
+  position: relative;
+  font-weight: 800;
+  display: block;
+  margin: 0.5em;
+  padding: 1em;
+  color: rgba(0, 0, 0, 0.8);
+}
+.site-header .site-nav ul a:hover {
+  color: white;
+}
+.site-header .site-nav ul a:before, .site-header .site-nav ul a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 75%;
+  margin-top: -0.5px;
+  background: rgb(230, 167, 96);
+}
+.site-header .site-nav ul a:before {
+  left: -2.5px;
+}
+.site-header .site-nav ul a:after {
+  right: 2.5px;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.site-header .site-nav ul a:hover:before {
+  background: rgb(230, 167, 96);
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.site-header .site-nav ul a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+/* HERO SECTION */
+.hero {
+  background-image: url("/img/Wedding-Cupcakes.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: left;
+  min-height: 90vh;
+  display: flex;
+}
+.hero .container {
+  margin: 10em 0 0 15em;
+}
+.hero .container p {
+  padding: 0 0 1.5em 0;
+  max-width: 500px;
+}
+.hero .color {
+  color: rgb(86, 36, 57);
+}
+
+/* FOOTER SECTION */
+.site-footer {
+  background-color: rgb(255, 236, 222);
+  padding: 6em;
+}
+.site-footer .container {
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1500px;
+}
+.site-footer .container li {
+  list-style: none;
+  align-items: left;
+}
+.site-footer a {
+  position: relative;
+  margin: 0.5em;
+  padding: 0.5em 0.5em 0.5em 0;
+  line-height: 2em;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.site-footer a:hover {
+  color: black;
+  font-style: italic;
+}
+.site-footer a:before, .site-footer a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: rgb(230, 167, 96);
+}
+.site-footer a:before {
+  left: -2.5px;
+}
+.site-footer a:after {
+  right: 2.5px;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.site-footer a:hover:before {
+  background: rgb(230, 167, 96);
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+.site-footer a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+.site-footer .copyright {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 75%;
+  padding: 3em;
+}
+.site-footer .copyright a {
+  color: rgb(230, 167, 96);
+  font-weight: 700;
+}
+
+.row .icon-button {
+  display: flex;
+  flex-direction: column;
+}
+.row .icon-button button {
+  padding: 0.3em;
+}
+
+/* SEASONAL SWEETS PAGE */
+.season-hero {
+  background-image: linear-gradient(217deg, rgb(255, 236, 222), rgba(255, 0, 0, 0) 70%), linear-gradient(19deg, rgb(255, 236, 222), rgba(0, 0, 255, 0) 70%), linear-gradient(150deg, rgb(59, 144, 255), rgba(0, 0, 255, 0) 60%), linear-gradient(180deg, rgb(163, 119, 138), rgba(0, 0, 0, 0) 70%);
+  min-height: 100vh;
+}
+.season-hero .greetings {
+  margin: 0em;
+  padding: 12em 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.season-hero .greetings h1 {
+  font-size: 6em;
+  line-height: 0.5em;
+}
+.season-hero .greetings p, .season-hero .greetings a {
+  display: block;
+  text-align: center;
+  margin: 0 1em;
+}
+.season-hero .greetings a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.season-hero .greetings a:hover {
+  color: rgb(86, 36, 57);
+}
+
+hr {
+  margin-top: 2em;
+  background: rgb(163, 119, 138);
+  height: 5px;
+  border: none;
+  width: 600px;
+}
+
+.seasonal-cookie-kits {
+  max-width: 2000px;
+  display: flex;
+  justify-content: center;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.section-header {
+  margin: 1em 0 0 5em;
+  font-size: 2em;
+}
+
+/* HELPERS */
+.hide-visually {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* BUTTONS */
+.button {
+  position: relative;
+  font-family: interstate, sans-serif;
+  background-color: rgb(230, 167, 96);
+  font-weight: 700;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+.button a {
+  transition: all 0.3s ease-in;
+  transform: scale 1, 1;
+}
+.button:hover {
+  color: white;
+}
+
+.button::before, .button::after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  z-index: 1;
+}
+
+.button::before {
+  z-index: 1;
+  opacity: 0;
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(0.1, 1);
+}
+
+.button:hover::before {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.button::after {
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.button:hover::after {
+  transform: scale(1, 0.1);
+  opacity: 0;
+}
+
+/* SOCIAL MEDIA ICONS */
+button {
+  font-family: interstate, sans-serif;
+  font-size: 100%;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+}
+button .icon {
+  font-size: 2em;
+}
+button.facebook .circle {
+  background-color: rgb(59, 89, 152);
+}
+button.instagram .circle {
+  background: linear-gradient(217deg, rgba(138, 58, 185, 0.8), rgba(255, 0, 0, 0) 70.71%), linear-gradient(127deg, rgba(233, 89, 80, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(1deg, rgb(252, 204, 99), rgba(0, 255, 0, 0) 70.71%), linear-gradient(5deg, rgba(205, 72, 107, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(99deg, rgba(188, 42, 141, 0.8), rgba(0, 255, 0, 0) 70.71%), linear-gradient(336deg, rgba(251, 173, 80, 0.8), rgba(0, 0, 255, 0) 70.71%);
+}
+button.twitter .circle {
+  background-color: rgb(29, 161, 242);
+}
+button.pinterest .circle {
+  background-color: rgb(230, 0, 35);
+}
+button.facebook, button.instagram, button.twitter, button.pinterest {
+  width: 12rem;
+  height: auto;
+}
+button.facebook .circle, button.instagram .circle, button.twitter .circle, button.pinterest .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3em;
+  height: 3em;
+  border-radius: 1.625rem;
+}
+button.facebook .circle .icon, button.instagram .circle .icon, button.twitter .circle .icon, button.pinterest .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  fill: white;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+button.facebook .circle .icon.logo, button.instagram .circle .icon.logo, button.twitter .circle .icon.logo, button.pinterest .circle .icon.logo {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  height: 1em;
+  left: 0.275em;
+  width: 1em;
+  background: none;
+}
+button.facebook .circle .icon.logo::before, button.instagram .circle .icon.logo::before, button.twitter .circle .icon.logo::before, button.pinterest .circle .icon.logo::before {
+  position: absolute;
+}
+button.facebook .label, button.instagram .label, button.twitter .label, button.pinterest .label {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1.2em 0;
+  margin: 0 0 0 1.85rem;
+  color: rgb(255, 236, 222);
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+button:hover .circle {
+  width: 100%;
+}
+button:hover .circle .icon.arrow {
+  background: white;
+  transform: translate(1rem, 0);
+}
+button:hover .label {
+  color: white;
+}
+
+/* CAROUSEL BUTTON */
+.carousel-item .active .button {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.6s all ease-in-out;
+  visibility: visible;
+}
+
+/* FLIP CARD BUTTON */
+.flip-button {
+  font-family: interstate, sans-serif;
+  background-color: rgb(230, 167, 96);
+  font-weight: 700;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+  border-radius: 15px;
+  text-transform: uppercase;
+  box-shadow: 5px 5px 5px rgb(163, 119, 138);
+}
+.flip-button a {
+  transition: all 0.3s ease-in;
+  transform: scale 1, 1;
+}
+.flip-button:hover {
+  color: white;
+}
+
+/* CSS ANIMATIONS */
+/* ANIMATE HERO ON LOAD */
+.hero .welcome {
+  animation-name: jd-scaleup;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  background-color: rgba(255, 236, 222, 0.9);
+  padding: 3em;
+  border-radius: 35px;
+  box-shadow: inset;
+}
+.hero .welcome h1 {
+  animation-name: jd-scaleup;
+  animation-duration: 2s;
+  animation-delay: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.hero .welcome p {
+  animation-name: jd-scaleup;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.hero .welcome .button {
+  animation-name: slide-in;
+  animation-duration: 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes jd-scaleup {
+  0% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes slide-in {
+  0% {
+    right: 500px;
+    opacity: 0;
+  }
+  100% {
+    right: 0px;
+    opacity: 1;
+  }
+}
+/* IMAGE CAROUSEL */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  max-width: 1000px;
+  max-height: 300px;
+}
+
+.carousel-item {
+  margin-left: 8em;
+  margin-top: 2em;
+  visibility: visible;
+  display: flex;
+  width: 50%;
+  height: 50%;
+  align-items: center;
+  border-radius: 25px;
+  position: relative;
+  background-color: rgb(255, 236, 222);
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  z-index: 0;
+  transition: 0.6s all linear;
+}
+
+.carousel-item-info {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  order: 1;
+  left: 0;
+  margin: auto;
+  padding: 0 40px;
+  width: 40%;
+}
+
+.carousel-item-image {
+  margin-left: 1em;
+  border-radius: 25px;
+  height: 90%;
+  flex-basis: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  transform: translateX(10%);
+  transition: 0.6s all ease-in-out;
+}
+
+.carousel-item-subtitle {
+  font-family: interstate, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+  color: rgb(163, 119, 138);
+  font-weight: 700;
+  transform: translateY(25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s all ease-in-out;
+}
+
+.carousel-item-title {
+  margin: 0;
+  padding: 0 1em 0 0;
+  letter-spacing: 3px;
+  font-weight: 700;
+  color: rgb(86, 36, 57);
+  transform: translateY(25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s all ease-in-out;
+}
+
+.carousel-item-description {
+  padding: 0 2em 0 0;
+  transform: translateY(25%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s all ease-in-out;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 22px;
+}
+
+.carousel-item--1 .carousel-item-image {
+  background-image: url("/img/2022-christmas-GINGERBREAD.jpg");
+}
+
+.carousel-item--2 .carousel-item-image {
+  background-image: url("/img/2022-christmas-holly-jolly-platter.jpg");
+}
+
+.carousel-item--3 .carousel-item-image {
+  background-image: url("/img/2022-christmas-snacks-box.jpg");
+}
+
+.carousel-item--4 .carousel-item-image {
+  background-image: url("/img/2022-christmas-cookie-cards.jpg");
+}
+
+.carousel-nav {
+  position: absolute;
+  right: 30em;
+  z-index: 2;
+  background-color: rgb(255, 236, 222);
+  bottom: 10em;
+}
+
+.carousel-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  fill: #5d5d5d;
+}
+
+.carousel-arrow {
+  cursor: pointer;
+  display: inline-block;
+  padding: 11px 15px;
+  position: relative;
+}
+
+.carousel-arrow:nth-child(1):after {
+  content: "";
+  right: -3px;
+  position: absolute;
+  width: 1px;
+  background-color: #b0b0b0;
+  height: 14px;
+  top: 50%;
+  margin-top: -7px;
+}
+
+.active {
+  z-index: 1;
+  display: flex;
+  visibility: visible;
+}
+
+.active .carousel-item-subtitle, .active .carousel-item-title, .active .carousel-item-description {
+  transform: translateY(0);
+  opacity: 1;
+  transition: 0.6s all ease-in-out;
+  visibility: visible;
+}
+
+.active .carousel-item-image {
+  transition: 0.6s all ease-in-out;
+  transform: translateX(0);
+}
+
+/* FLIP CARDS */
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  margin: 0 0.5em;
+  text-align: center;
+}
+.flip-box h2 {
+  margin: 0.2em;
+  padding: 1em 0.5em 0.5em 0;
+  font-size: 1.5em;
+}
+.flip-box p {
+  margin: 0.2em;
+  font-size: 87.5%;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.flip-box-front {
+  background-color: rgb(255, 236, 222);
+  color: black;
+}
+.flip-box-front img {
+  border-radius: 25px;
+  box-shadow: 5px 5px 5px rgb(163, 119, 138);
+}
+
+.flip-box-back {
+  background-color: transparent;
+  border: 2px solid rgb(86, 36, 57);
+  box-shadow: 5px 5px 5px rgb(163, 119, 138);
+  transform: rotateY(180deg);
+}
